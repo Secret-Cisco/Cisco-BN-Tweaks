@@ -1,0 +1,24 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_plastic_groundsheet",
+    "name": "plastic groundsheet",
+    "description": "A large sheet of thick plastic has been tossed on the ground here.  It would be a useful place to do some butchery, perhaps. Liquids can be collected off its surface.",
+    "symbol": "D",
+    "bgcolor": "light_blue",
+    "move_cost_mod": 0,
+    "required_str": 3,
+    "deployed_item": "plastic_sheet",
+    "flags": [ "TRANSPARENT", "SHORT", "FLAT_SURF", "CAN_SIT", "LIQUIDCONT" ],
+    "deconstruct": { "items": [ { "item": "plastic_sheet", "count": 1 } ] },
+    "bash": {
+      "str_min": 5,
+      "str_max": 10,
+      "sound": "whuff!",
+      "sound_fail": "crinkle.",
+      "items": [ { "item": "plastic_sheet", "count": 1 } ]
+    },
+    "examine_action": "workbench",
+    "workbench": { "multiplier": 0.85, "mass": 500000, "volume": "500L" }
+  }
+]

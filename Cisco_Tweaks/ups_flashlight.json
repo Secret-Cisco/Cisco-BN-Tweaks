@@ -1,0 +1,61 @@
+[
+  {
+    "id": "flashlight_ups",
+    "type": "TOOL",
+    "category": "tools",
+    "name": { "str": "flashlight (off)", "str_pl": "flashlights (off)" },
+    "description": "This is a typical household flashlight modified to use UPS power.  Using this flashlight will turn it on and provide light, assuming it is charged with batteries.",
+    "material": [ "plastic", "aluminum" ],
+    "symbol": ";",
+    "color": "blue",
+    "weight": "320 g",
+    "volume": "110 ml",
+    "price": 500,
+    "price_postapoc": 100,
+    "charges_per_use": 1,
+    "ammo": "battery",
+    "initial_charges": 160,
+    "max_charges": 200,
+    "flags": [ "BELT_CLIP", "USE_UPS", "NO_UNLOAD", "NO_RELOAD", "RECHARGE" ],
+    "use_action": {
+      "type": "transform",
+      "msg": "You turn the flashlight on.",
+      "target": "flashlight_ups_on",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "The flashlight's batteries are dead."
+    }
+  },
+  {
+    "id": "flashlight_ups_on",
+    "copy-from": "flashlight_ups",
+    "type": "TOOL",
+    "name": { "str": "flashlight (on)", "str_pl": "flashlights (on)" },
+    "power_draw": 10000,
+    "revert_to": "flashlight_ups",
+    "use_action": { "menu_text": "Turn off", "type": "transform", "msg": "You turn the flashlight off.", "target": "flashlight_ups" },
+    "flags": [ "LIGHT_300", "TRADER_AVOID", "BELT_CLIP", "USE_UPS", "NO_UNLOAD", "NO_RELOAD", "RECHARGE" ]
+  },
+  {
+    "result": "flashlight_ups_on",
+    "type": "recipe",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_LIGHTING",
+    "skill_used": "electronics",
+    "difficulty": 3,
+    "time": "15 m",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [
+      [ "manual_electronics", 3 ],
+      [ "textbook_electronics", 3 ],
+      [ "advanced_electronics", 3 ],
+      [ "recipe_lab_elec", 3 ],
+      [ "textbook_anarch", 3 ]
+    ],
+    "using": [ [ "soldering_standard", 24 ] ],
+    "qualities": [ { "id": "SCREW", "level": 1 } ],
+    "components": [ [ [ "battery_ups", 1 ] ], [ [ "light_battery_cell", 2 ] ], [ [ "flashlight", 1 ] ], [ [ "cable", 10 ] ] ]
+  }
+]

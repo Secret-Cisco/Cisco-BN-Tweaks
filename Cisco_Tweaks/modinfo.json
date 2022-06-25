@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "secret_cisco_tweaks",
+    "name": "Secret Cisco's Tweak",
+    "authors": [ "Secret Cisco" ],
+    "maintainers": [ "Secret Cisco" ],
+    "description": "Some of my personal tweaks in mod form.",
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  }
+]
