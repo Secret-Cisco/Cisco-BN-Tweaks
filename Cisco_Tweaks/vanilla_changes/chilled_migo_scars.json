@@ -1,0 +1,30 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_alien_scar",
+    "name": "scarred lump",
+    "description": "This is a pile of unidentified twitching alien flesh, belching strange gases out of injured vessels.",
+    "symbol": "{",
+    "color": "green",
+    "move_cost_mod": 6,
+    "coverage": 40,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "EMITTER" ],
+    "emissions": [ "emit_warm_air_migo_trickle" ],
+    "//": "TODO: Make a custom toxic gas emission that is not visible to the player",
+    "bash": {
+      "str_min": 250,
+      "str_max": 600,
+      "sound": "splorch!",
+      "sound_fail": "splat!",
+      "items": [ { "item": "fetid_goop", "count": [ 6, 13 ], "prob": 100 } ]
+    }
+  },
+  {
+    "id": "emit_warm_air_migo_trickle",
+    "type": "emit",
+    "field": "fd_hot_air_sauna",
+    "intensity": 1,
+    "qty": 45
+  }
+]
