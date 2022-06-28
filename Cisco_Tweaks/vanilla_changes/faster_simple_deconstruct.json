@@ -1,0 +1,16 @@
+[
+  {
+    "type": "construction",
+    "id": "constr_deconstruct_simple",
+    "description": "Deconstruct Simple Furniture",
+    "category": "FURN",
+    "required_skills": [ [ "fabrication", 0 ] ],
+    "time": "4 m",
+    "pre_note": "Certain terrain and furniture can be deconstructed without any tools.",
+    "pre_flags": "EASY_DECONSTRUCT",
+    "pre_special": "check_deconstruct",
+    "post_flags": [ "keep_items" ],
+    "dark_craftable": true,
+    "post_special": "done_deconstruct"
+  }
+]
