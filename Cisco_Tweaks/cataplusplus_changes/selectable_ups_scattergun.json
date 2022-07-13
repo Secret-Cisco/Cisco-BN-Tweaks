@@ -25,7 +25,7 @@
     "dispersion": 300,
     "durability": 8,
     "default_mods": [ "rail_laser_sight", "pistol_grip" ],
-    "built_in_mods": [ "xarm_laser_shotgun_aux_ups" ],
+    "built_in_mods": [ "sc_xarm_laser_shotgun_aux_ups" ],
     "modes": [ [ "DEFAULT", "semi", 1 ], [ "BURST", "double-barrel", 2 ] ],
     "reload": 250,
     "valid_mod_locations": [
