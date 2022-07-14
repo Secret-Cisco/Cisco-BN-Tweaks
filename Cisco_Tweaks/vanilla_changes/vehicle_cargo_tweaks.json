@@ -1,0 +1,112 @@
+[
+  {
+    "type": "vehicle_part",
+    "id": "cargo_space",
+    "name": { "str": "cargo space" },
+    "symbol": "=",
+    "looks_like": "box",
+    "color": "light_gray",
+    "broken_symbol": "#",
+    "broken_color": "dark_gray",
+    "durability": 250,
+    "size": 2400,
+    "item": "cargo_rack",
+    "location": "center",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
+    },
+    "flags": [ "BOARDABLE", "CARGO", "COVERED" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 6, 8 ] },
+      { "item": "steel_chunk", "count": [ 6, 8 ] },
+      { "item": "scrap", "count": [ 6, 8 ] }
+    ],
+    "damage_reduction": { "all": 28 }
+  },
+  {
+    "type": "GENERIC",
+    "id": "cargo_rack",
+    "name": { "str": "cargo carrier" },
+    "description": "A heavy frame outfitted with tie-downs and attachment points for carrying cargo.",
+    "weight": "150000 g",
+    "to_hit": -4,
+    "color": "cyan",
+    "symbol": "]",
+    "material": [ "steel", "plastic" ],
+    "volume": "50 L",
+    "bashing": 2,
+    "category": "veh_parts",
+    "price": 40000,
+    "price_postapoc": 500
+  },
+  {
+    "abstract": "stowboard",
+    "type": "vehicle_part",
+    "name": { "str": "stow board" },
+    "item": "sheet_metal",
+    "location": "center",
+    "color": "white",
+    "broken_symbol": "#",
+    "broken_color": "light_gray",
+    "durability": 80,
+    "description": "A metal wall with a storage locker.  Keeps zombies outside the vehicle and prevents people from seeing through it.",
+    "size": 400,
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
+    },
+    "flags": [ "OBSTACLE", "OPAQUE", "CARGO", "COVERED", "FULL_BOARD", "NO_ROOF_NEEDED", "LOCKABLE_CARGO" ],
+    "damage_reduction": { "all": 28 }
+  },
+  {
+    "abstract": "hatch_abstract",
+    "breaks_into": "ig_vp_frame",
+    "broken_color": "light_gray",
+    "broken_symbol": "&",
+    "color": "light_gray",
+    "damage_modifier": 80,
+    "damage_reduction": { "all": 30 },
+    "description": "A strong door.  A window lets you see through it when closed.",
+    "durability": 420,
+    "flags": [ "CARGO", "LOCKABLE_CARGO", "OBSTACLE", "OPENABLE", "MULTISQUARE", "BOARDABLE", "COVERED" ],
+    "item": "frame",
+    "location": "center",
+    "looks_like": "door",
+    "name": { "str": "hatch" },
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
+    },
+    "size": 350,
+    "symbol": "+",
+    "type": "vehicle_part"
+  },
+  {
+    "abstract": "hatch_opaque_abstract",
+    "breaks_into": "ig_vp_frame",
+    "broken_color": "light_gray",
+    "broken_symbol": "&",
+    "color": "light_gray",
+    "damage_modifier": 80,
+    "damage_reduction": { "all": 34 },
+    "description": "A strong door.  Solid construction means you can't see through it when closed.",
+    "durability": 450,
+    "flags": [ "CARGO", "LOCKABLE_CARGO", "OBSTACLE", "OPENABLE", "MULTISQUARE", "BOARDABLE", "COVERED", "OPAQUE" ],
+    "item": "frame",
+    "location": "center",
+    "looks_like": "door_opaque",
+    "name": { "str": "opaque hatch" },
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
+    },
+    "size": 350,
+    "symbol": "+",
+    "type": "vehicle_part"
+  }
+]
