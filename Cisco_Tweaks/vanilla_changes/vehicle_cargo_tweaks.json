@@ -62,6 +62,42 @@
     "damage_reduction": { "all": 28 }
   },
   {
+    "id": "stowboard_horizontal",
+    "copy-from": "stowboard",
+    "type": "vehicle_part",
+    "symbol": "h"
+  },
+  {
+    "id": "stowboard_ne",
+    "copy-from": "stowboard",
+    "type": "vehicle_part",
+    "symbol": "u"
+  },
+  {
+    "id": "stowboard_nw",
+    "copy-from": "stowboard",
+    "type": "vehicle_part",
+    "symbol": "y"
+  },
+  {
+    "id": "stowboard_se",
+    "copy-from": "stowboard",
+    "type": "vehicle_part",
+    "symbol": "n"
+  },
+  {
+    "id": "stowboard_sw",
+    "copy-from": "stowboard",
+    "type": "vehicle_part",
+    "symbol": "b"
+  },
+  {
+    "id": "stowboard_vertical",
+    "copy-from": "stowboard",
+    "type": "vehicle_part",
+    "symbol": "j"
+  },
+  {
     "abstract": "hatch_abstract",
     "breaks_into": "ig_vp_frame",
     "broken_color": "light_gray",
@@ -86,6 +122,12 @@
     "type": "vehicle_part"
   },
   {
+    "copy-from": "hatch_abstract",
+    "id": "hatch",
+    "symbol": "+",
+    "type": "vehicle_part"
+  },
+  {
     "abstract": "hatch_opaque_abstract",
     "breaks_into": "ig_vp_frame",
     "broken_color": "light_gray",
@@ -106,6 +148,12 @@
       "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
     },
     "size": 350,
+    "symbol": "+",
+    "type": "vehicle_part"
+  },
+  {
+    "copy-from": "hatch_opaque_abstract",
+    "id": "hatch_opaque",
     "symbol": "+",
     "type": "vehicle_part"
   }
